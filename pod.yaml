@@ -5,6 +5,6 @@ spec:
 -  containerName: deepak
    image: nginx
    ports:
-   - conatinerPort: 80
+   - containerPort: 80
 
 
