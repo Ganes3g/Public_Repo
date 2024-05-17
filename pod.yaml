@@ -1,10 +1,12 @@
-#deployment file
-apiVersion: apps/v1
+apiVersion: v1
 kind: Pod
+metadata:
+  name: nginx-pod
 spec:
--  containerName: deepak
-   image: nginx
-   ports:
-   - containerPort: 80
+  containers:
+  - name: deepak
+    image: nginx
+    ports:
+    - containerPort: 80
 
 
