@@ -1,36 +1,10 @@
 #deployment file
 apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
+kind: Pod
 spec:
-  replicas: 5
-  selector:
-    matchLabels:
-      app: devops
-  template:
-    metadata:
-      labels:
-        app: devops
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
+-  containerName: deepak
+   image: nginx
+   ports:
+   - conatinerPort: 80
 
 
---- # service file
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-service
-spec:
-  selector:
-    app: devops
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
-  type: NodePort
