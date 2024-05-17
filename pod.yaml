@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: rajubai
 spec:
   containers:
-  - name: deepak
+  - name: deepakraju
     image: nginx
     ports:
     - containerPort: 80
